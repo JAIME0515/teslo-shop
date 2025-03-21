@@ -58,13 +58,13 @@ export default async function OrderPage({ params }: OrderPageProps) {
           <div className="bg-white rounded-xl shadow-xl p-7 h-min">
             <h2 className="text-2xl mb-2 "> Dirección de entrega</h2>
             <div className="mb-10">
-              <p>Gerardo Escobar</p>
+              <p>Jaime Apodaca</p>
               <p>Av. Siempre viva 123</p>
-              <p>Col. El jobo</p>
-              <p>Tuxtla Gutiérrez</p>
-              <p>Chiapas</p>
-              <p>México</p>
-              <p>CP 29110</p>
+              <p>Col. Centro</p>
+              <p>Alcaldía Cuauhtémoc</p>
+              <p>Ciudad de México</p>
+              <p>CP 123123</p>
+              <p>123.123.123</p>
             </div>
             {/* divider*/}
             <div className="h-px w-full bg-gray-200 my-10" />

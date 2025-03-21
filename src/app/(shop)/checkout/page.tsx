@@ -53,7 +53,7 @@ const CheckoutPage = () => {
           <div className="bg-white rounded-xl shadow-xl p-7">
             <h2 className="text-2xl mb-2">Dirección de entrega</h2>
             <div className="mb-10">
-              <p className="text-xl">Fernando Herrera</p>
+              <p className="text-xl">Jaime Apodaca</p>
               <p>Av. Siempre viva 123</p>
               <p>Col. Centro</p>
               <p>Alcaldía Cuauhtémoc</p>
