@@ -7,9 +7,9 @@ import { useForm } from "react-hook-form";
 import clsx from "clsx";
 
 import type { Address, Country } from "@/interfaces";
-import { useAddressStore } from "@/store/address/address-store";
 import { setUserAddress } from "@/actions/address/set-user-address";
 import { deleteUserAddress } from "@/actions/address/delete-user-address";
+import { useAddressStore } from "@/store/address/address-store";
 
 type FormInputs = {
   firstName: string;
@@ -30,7 +30,6 @@ interface Props {
 
 export const AddressForm = ({ countries, userStoredAddress = {} }: Props) => {
   const router = useRouter();
-
   const {
     handleSubmit,
     register,
@@ -46,7 +45,7 @@ export const AddressForm = ({ countries, userStoredAddress = {} }: Props) => {
   const { data: session } = useSession({
     required: true,
   });
-  console.log("session", session);
+
   const setAddress = useAddressStore((state) => state.setAddress);
   const address = useAddressStore((state) => state.address);
 
@@ -57,8 +56,9 @@ export const AddressForm = ({ countries, userStoredAddress = {} }: Props) => {
   }, []);
 
   const onSubmit = async (data: FormInputs) => {
-    setAddress(data);
     const { rememberAddress, ...restAddress } = data;
+
+    setAddress(restAddress);
 
     if (rememberAddress) {
       await setUserAddress(restAddress, session!.user.id);
